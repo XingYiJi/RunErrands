@@ -1,0 +1,8 @@
+E:\毕业设计\设计\RunErrand\Services\bin\Release\Services.exe.config
+E:\毕业设计\设计\RunErrand\Services\bin\Release\Services.exe
+E:\毕业设计\设计\RunErrand\Services\bin\Release\Services.pdb
+E:\毕业设计\设计\RunErrand\Services\bin\Release\EntityFramework.dll
+E:\毕业设计\设计\RunErrand\Services\obj\x86\Release\Services.Properties.Resources.resources
+E:\毕业设计\设计\RunErrand\Services\obj\x86\Release\Services.csproj.GenerateResource.Cache
+E:\毕业设计\设计\RunErrand\Services\obj\x86\Release\Services.exe
+E:\毕业设计\设计\RunErrand\Services\obj\x86\Release\Services.pdb

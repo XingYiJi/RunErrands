@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RunDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CommentOrder" EntityType="RunDBModel.CommentOrder" />
+    <EntitySet Name="DataCount" EntityType="RunDBModel.DataCount" />
+    <EntitySet Name="Order" EntityType="RunDBModel.Order" />
+    <EntitySet Name="User" EntityType="RunDBModel.User" />
+    <EntitySet Name="UserType" EntityType="RunDBModel.UserType" />
+  </EntityContainer>
+  <EntityType Name="CommentOrder">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="OrderID" />
+    <Property Type="Int32" Name="CreaterID" />
+    <Property Type="Int32" Name="TakerID" />
+    <Property Type="String" Name="Comment" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DataCount">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="OrderID" />
+    <Property Type="Int32" Name="CreaterID" />
+    <Property Type="Int32" Name="TakerID" />
+    <Property Type="String" Name="Street" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Type="Int32" Name="OrderID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="CreaterID" />
+    <Property Type="DateTime" Name="CreateDateTime" />
+    <Property Type="String" Name="ProductName" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="ProductWeight" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="SenderName" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="SenderPhone" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SenderAddress" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ReceiverName" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="ReceiverPhone" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ReceiverAddress" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="TakerID" />
+    <Property Type="DateTime" Name="TakeStartDateTime" />
+    <Property Type="DateTime" Name="TakeEndDateTime" />
+    <Property Type="Int32" Name="State" />
+    <Property Type="String" Name="Remarks" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PointX" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PointY" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PointX2" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PointY2" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Street" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Type="Int32" Name="UserID" Nullable="false" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="UserTypeID" Nullable="false" />
+    <Property Type="String" Name="Adress" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Sex" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RealName" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Phone" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="UserType">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Type="Int32" Name="RoleID" Nullable="false" />
+    <Property Type="String" Name="RoleName" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+</Schema>

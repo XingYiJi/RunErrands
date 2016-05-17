@@ -1,0 +1,10 @@
+E:\毕业设计\设计\RunErrand\WebPages\obj\Debug\WebPages.csprojResolveAssemblyReference.cache
+E:\毕业设计\设计\RunErrand\WebPages\bin\WebPages.dll
+E:\毕业设计\设计\RunErrand\WebPages\bin\WebPages.pdb
+E:\毕业设计\设计\RunErrand\WebPages\bin\RunErrandService.dll
+E:\毕业设计\设计\RunErrand\WebPages\bin\Services.exe
+E:\毕业设计\设计\RunErrand\WebPages\bin\EntityFramework.dll
+E:\毕业设计\设计\RunErrand\WebPages\bin\RunErrandService.pdb
+E:\毕业设计\设计\RunErrand\WebPages\bin\Services.pdb
+E:\毕业设计\设计\RunErrand\WebPages\obj\Debug\WebPages.dll
+E:\毕业设计\设计\RunErrand\WebPages\obj\Debug\WebPages.pdb

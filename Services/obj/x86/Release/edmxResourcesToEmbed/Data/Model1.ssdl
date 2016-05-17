@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RunDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="RunDBModelStoreContainer">
+    <EntitySet Name="CommentOrder" EntityType="RunDBModel.Store.CommentOrder" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DataCount" EntityType="RunDBModel.Store.DataCount" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Order" EntityType="RunDBModel.Store.Order" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="User" EntityType="RunDBModel.Store.User" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserType" EntityType="RunDBModel.Store.UserType" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="CommentOrder">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OrderID" Type="int" />
+    <Property Name="CreaterID" Type="int" />
+    <Property Name="TakerID" Type="int" />
+    <Property Name="Comment" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DataCount">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OrderID" Type="int" />
+    <Property Name="CreaterID" Type="int" />
+    <Property Name="TakerID" Type="int" />
+    <Property Name="Street" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CreaterID" Type="int" />
+    <Property Name="CreateDateTime" Type="datetime" />
+    <Property Name="ProductName" Type="nchar" MaxLength="10" />
+    <Property Name="ProductWeight" Type="nchar" MaxLength="10" />
+    <Property Name="SenderName" Type="nchar" MaxLength="10" />
+    <Property Name="SenderPhone" Type="varchar" MaxLength="50" />
+    <Property Name="SenderAddress" Type="varchar" MaxLength="50" />
+    <Property Name="ReceiverName" Type="nchar" MaxLength="10" />
+    <Property Name="ReceiverPhone" Type="varchar" MaxLength="50" />
+    <Property Name="ReceiverAddress" Type="varchar" MaxLength="50" />
+    <Property Name="TakerID" Type="int" />
+    <Property Name="TakeStartDateTime" Type="datetime" />
+    <Property Name="TakeEndDateTime" Type="datetime" />
+    <Property Name="State" Type="int" />
+    <Property Name="Remarks" Type="varchar" MaxLength="50" />
+    <Property Name="PointX" Type="varchar" MaxLength="50" />
+    <Property Name="PointY" Type="varchar" MaxLength="50" />
+    <Property Name="PointX2" Type="varchar" MaxLength="50" />
+    <Property Name="PointY2" Type="varchar" MaxLength="50" />
+    <Property Name="Street" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="Password" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="UserTypeID" Type="int" Nullable="false" />
+    <Property Name="Adress" Type="text" />
+    <Property Name="Sex" Type="varchar" MaxLength="4" />
+    <Property Name="RealName" Type="varchar" MaxLength="30" />
+    <Property Name="Phone" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="UserType">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="int" Nullable="false" />
+    <Property Name="RoleName" Type="nchar" Nullable="false" MaxLength="10" />
+  </EntityType>
+</Schema>

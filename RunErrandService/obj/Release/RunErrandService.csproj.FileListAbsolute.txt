@@ -1,0 +1,7 @@
+E:\毕业设计\设计\RunErrand\RunErrandService\bin\RunErrandService.dll
+E:\毕业设计\设计\RunErrand\RunErrandService\bin\RunErrandService.pdb
+E:\毕业设计\设计\RunErrand\RunErrandService\bin\Services.exe
+E:\毕业设计\设计\RunErrand\RunErrandService\bin\Services.pdb
+E:\毕业设计\设计\RunErrand\RunErrandService\obj\Release\RunErrandService.csprojResolveAssemblyReference.cache
+E:\毕业设计\设计\RunErrand\RunErrandService\obj\Release\RunErrandService.dll
+E:\毕业设计\设计\RunErrand\RunErrandService\obj\Release\RunErrandService.pdb

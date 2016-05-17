@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="RunDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="RunDBModelStoreContainer">
+          <EntitySet Name="CommentOrder" EntityType="RunDBModel.Store.CommentOrder" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DataCount" EntityType="RunDBModel.Store.DataCount" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Order" EntityType="RunDBModel.Store.Order" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="User" EntityType="RunDBModel.Store.User" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserType" EntityType="RunDBModel.Store.UserType" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="CommentOrder">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OrderID" Type="int" />
+          <Property Name="CreaterID" Type="int" />
+          <Property Name="TakerID" Type="int" />
+          <Property Name="Comment" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="DataCount">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OrderID" Type="int" />
+          <Property Name="CreaterID" Type="int" />
+          <Property Name="TakerID" Type="int" />
+          <Property Name="Street" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Name="OrderID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CreaterID" Type="int" />
+          <Property Name="CreateDateTime" Type="datetime" />
+          <Property Name="ProductName" Type="nchar" MaxLength="10" />
+          <Property Name="ProductWeight" Type="nchar" MaxLength="10" />
+          <Property Name="SenderName" Type="nchar" MaxLength="10" />
+          <Property Name="SenderPhone" Type="varchar" MaxLength="50" />
+          <Property Name="SenderAddress" Type="varchar" MaxLength="50" />
+          <Property Name="ReceiverName" Type="nchar" MaxLength="10" />
+          <Property Name="ReceiverPhone" Type="varchar" MaxLength="50" />
+          <Property Name="ReceiverAddress" Type="varchar" MaxLength="50" />
+          <Property Name="TakerID" Type="int" />
+          <Property Name="TakeStartDateTime" Type="datetime" />
+          <Property Name="TakeEndDateTime" Type="datetime" />
+          <Property Name="State" Type="int" />
+          <Property Name="Remarks" Type="varchar" MaxLength="50" />
+          <Property Name="PointX" Type="varchar" MaxLength="50" />
+          <Property Name="PointY" Type="varchar" MaxLength="50" />
+          <Property Name="PointX2" Type="varchar" MaxLength="50" />
+          <Property Name="PointY2" Type="varchar" MaxLength="50" />
+          <Property Name="Street" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="Password" Type="varchar" Nullable="false" MaxLength="40" />
+          <Property Name="UserTypeID" Type="int" Nullable="false" />
+          <Property Name="Adress" Type="text" />
+          <Property Name="Sex" Type="varchar" MaxLength="4" />
+          <Property Name="RealName" Type="varchar" MaxLength="30" />
+          <Property Name="Phone" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="UserType">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="int" Nullable="false" />
+          <Property Name="RoleName" Type="nchar" Nullable="false" MaxLength="10" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RunDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CommentOrder" EntityType="RunDBModel.CommentOrder" />
+          <EntitySet Name="DataCount" EntityType="RunDBModel.DataCount" />
+          <EntitySet Name="Order" EntityType="RunDBModel.Order" />
+          <EntitySet Name="User" EntityType="RunDBModel.User" />
+          <EntitySet Name="UserType" EntityType="RunDBModel.UserType" />
+        </EntityContainer>
+        <EntityType Name="CommentOrder">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="OrderID" />
+          <Property Type="Int32" Name="CreaterID" />
+          <Property Type="Int32" Name="TakerID" />
+          <Property Type="String" Name="Comment" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="DataCount">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="OrderID" />
+          <Property Type="Int32" Name="CreaterID" />
+          <Property Type="Int32" Name="TakerID" />
+          <Property Type="String" Name="Street" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Type="Int32" Name="OrderID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="CreaterID" />
+          <Property Type="DateTime" Name="CreateDateTime" />
+          <Property Type="String" Name="ProductName" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="ProductWeight" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="SenderName" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="SenderPhone" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SenderAddress" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ReceiverName" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="ReceiverPhone" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ReceiverAddress" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="TakerID" />
+          <Property Type="DateTime" Name="TakeStartDateTime" />
+          <Property Type="DateTime" Name="TakeEndDateTime" />
+          <Property Type="Int32" Name="State" />
+          <Property Type="String" Name="Remarks" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PointX" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PointY" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PointX2" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PointY2" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Street" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Type="Int32" Name="UserID" Nullable="false" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="UserTypeID" Nullable="false" />
+          <Property Type="String" Name="Adress" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Sex" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RealName" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Phone" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="UserType">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Type="Int32" Name="RoleID" Nullable="false" />
+          <Property Type="String" Name="RoleName" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RunDBModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="CommentOrder">
+            <EntityTypeMapping TypeName="RunDBModel.CommentOrder">
+              <MappingFragment StoreEntitySet="CommentOrder">
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="TakerID" ColumnName="TakerID" />
+                <ScalarProperty Name="CreaterID" ColumnName="CreaterID" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DataCount">
+            <EntityTypeMapping TypeName="RunDBModel.DataCount">
+              <MappingFragment StoreEntitySet="DataCount">
+                <ScalarProperty Name="Street" ColumnName="Street" />
+                <ScalarProperty Name="TakerID" ColumnName="TakerID" />
+                <ScalarProperty Name="CreaterID" ColumnName="CreaterID" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Order">
+            <EntityTypeMapping TypeName="RunDBModel.Order">
+              <MappingFragment StoreEntitySet="Order">
+                <ScalarProperty Name="Street" ColumnName="Street" />
+                <ScalarProperty Name="PointY2" ColumnName="PointY2" />
+                <ScalarProperty Name="PointX2" ColumnName="PointX2" />
+                <ScalarProperty Name="PointY" ColumnName="PointY" />
+                <ScalarProperty Name="PointX" ColumnName="PointX" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="TakeEndDateTime" ColumnName="TakeEndDateTime" />
+                <ScalarProperty Name="TakeStartDateTime" ColumnName="TakeStartDateTime" />
+                <ScalarProperty Name="TakerID" ColumnName="TakerID" />
+                <ScalarProperty Name="ReceiverAddress" ColumnName="ReceiverAddress" />
+                <ScalarProperty Name="ReceiverPhone" ColumnName="ReceiverPhone" />
+                <ScalarProperty Name="ReceiverName" ColumnName="ReceiverName" />
+                <ScalarProperty Name="SenderAddress" ColumnName="SenderAddress" />
+                <ScalarProperty Name="SenderPhone" ColumnName="SenderPhone" />
+                <ScalarProperty Name="SenderName" ColumnName="SenderName" />
+                <ScalarProperty Name="ProductWeight" ColumnName="ProductWeight" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="CreateDateTime" ColumnName="CreateDateTime" />
+                <ScalarProperty Name="CreaterID" ColumnName="CreaterID" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="User">
+            <EntityTypeMapping TypeName="RunDBModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="RealName" ColumnName="RealName" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Adress" ColumnName="Adress" />
+                <ScalarProperty Name="UserTypeID" ColumnName="UserTypeID" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserType">
+            <EntityTypeMapping TypeName="RunDBModel.UserType">
+              <MappingFragment StoreEntitySet="UserType">
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model1">
+        <EntityTypeShape EntityType="RunDBModel.CommentOrder" Width="1.5" PointX="0.75" PointY="0.75" Height="1.9700325520833326" />
+        <EntityTypeShape EntityType="RunDBModel.DataCount" Width="1.5" PointX="2.75" PointY="0.75" Height="1.9700325520833317" />
+        <EntityTypeShape EntityType="RunDBModel.Order" Width="1.5" PointX="0.75" PointY="3.75" Height="5.02634765625" />
+        <EntityTypeShape EntityType="RunDBModel.User" Width="1.5" PointX="2.75" PointY="3.75" Height="2.5430916341145817" />
+        <EntityTypeShape EntityType="RunDBModel.UserType" Width="1.5" PointX="4.75" PointY="0.75" Height="1.3969734700520817" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

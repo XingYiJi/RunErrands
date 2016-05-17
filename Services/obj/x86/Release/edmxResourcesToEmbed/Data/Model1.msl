@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RunDBModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="CommentOrder">
+      <EntityTypeMapping TypeName="RunDBModel.CommentOrder">
+        <MappingFragment StoreEntitySet="CommentOrder">
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="TakerID" ColumnName="TakerID" />
+          <ScalarProperty Name="CreaterID" ColumnName="CreaterID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DataCount">
+      <EntityTypeMapping TypeName="RunDBModel.DataCount">
+        <MappingFragment StoreEntitySet="DataCount">
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="TakerID" ColumnName="TakerID" />
+          <ScalarProperty Name="CreaterID" ColumnName="CreaterID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Order">
+      <EntityTypeMapping TypeName="RunDBModel.Order">
+        <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="PointY2" ColumnName="PointY2" />
+          <ScalarProperty Name="PointX2" ColumnName="PointX2" />
+          <ScalarProperty Name="PointY" ColumnName="PointY" />
+          <ScalarProperty Name="PointX" ColumnName="PointX" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="TakeEndDateTime" ColumnName="TakeEndDateTime" />
+          <ScalarProperty Name="TakeStartDateTime" ColumnName="TakeStartDateTime" />
+          <ScalarProperty Name="TakerID" ColumnName="TakerID" />
+          <ScalarProperty Name="ReceiverAddress" ColumnName="ReceiverAddress" />
+          <ScalarProperty Name="ReceiverPhone" ColumnName="ReceiverPhone" />
+          <ScalarProperty Name="ReceiverName" ColumnName="ReceiverName" />
+          <ScalarProperty Name="SenderAddress" ColumnName="SenderAddress" />
+          <ScalarProperty Name="SenderPhone" ColumnName="SenderPhone" />
+          <ScalarProperty Name="SenderName" ColumnName="SenderName" />
+          <ScalarProperty Name="ProductWeight" ColumnName="ProductWeight" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="CreateDateTime" ColumnName="CreateDateTime" />
+          <ScalarProperty Name="CreaterID" ColumnName="CreaterID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="RunDBModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="RealName" ColumnName="RealName" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="UserTypeID" ColumnName="UserTypeID" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserType">
+      <EntityTypeMapping TypeName="RunDBModel.UserType">
+        <MappingFragment StoreEntitySet="UserType">
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

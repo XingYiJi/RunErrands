@@ -1,0 +1,957 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.ewide.com" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.ewide.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.ewide.com">
+      <s:element name="UserLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserLoginResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserRegister">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserRegisterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserRegisterResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserPlaceOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserPlaceOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserPlaceOrderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MySoapHeader" type="tns:MySoapHeader" />
+      <s:complexType name="MySoapHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="SearchUnCompleteOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchUnCompleteOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchUnCompleteOrderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchUnCompleteOrder2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchUnCompleteOrder2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchUnCompleteOrder2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchCompleteOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchCompleteOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchCompleteOrderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteUnTakedOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteUnTakedOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteUnTakedOrderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddComment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCommentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddCommentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchMapPoint">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchMapPointResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchMapPointResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserTakeOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserTakeOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserTakeOrderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchUnCompleteTakedOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchUnCompleteTakedOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchUnCompleteTakedOrderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchCompleteTakedOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchCompleteTakedOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchCompleteTakedOrderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BackTakedOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BackTakedOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BackTakedOrderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="completeTakedOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="completeTakedOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="completeTakedOrderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPointRoute">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPointRouteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPointRouteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchComment">
+        <s:complexType />
+      </s:element>
+      <s:element name="SearchCommentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchCommentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetComment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCommentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCommentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOrderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModifyUserType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModifyUserTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ModifyUserTypeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchUserByType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchUserByTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchUserByTypeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="UserLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:UserLogin" />
+  </wsdl:message>
+  <wsdl:message name="UserLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:UserLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserRegisterSoapIn">
+    <wsdl:part name="parameters" element="tns:UserRegister" />
+  </wsdl:message>
+  <wsdl:message name="UserRegisterSoapOut">
+    <wsdl:part name="parameters" element="tns:UserRegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserPlaceOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:UserPlaceOrder" />
+  </wsdl:message>
+  <wsdl:message name="UserPlaceOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:UserPlaceOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserPlaceOrderMySoapHeader">
+    <wsdl:part name="MySoapHeader" element="tns:MySoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="SearchUnCompleteOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchUnCompleteOrder" />
+  </wsdl:message>
+  <wsdl:message name="SearchUnCompleteOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchUnCompleteOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchUnCompleteOrderMySoapHeader">
+    <wsdl:part name="MySoapHeader" element="tns:MySoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="SearchUnCompleteOrder2SoapIn">
+    <wsdl:part name="parameters" element="tns:SearchUnCompleteOrder2" />
+  </wsdl:message>
+  <wsdl:message name="SearchUnCompleteOrder2SoapOut">
+    <wsdl:part name="parameters" element="tns:SearchUnCompleteOrder2Response" />
+  </wsdl:message>
+  <wsdl:message name="SearchUnCompleteOrder2MySoapHeader">
+    <wsdl:part name="MySoapHeader" element="tns:MySoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="SearchCompleteOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchCompleteOrder" />
+  </wsdl:message>
+  <wsdl:message name="SearchCompleteOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchCompleteOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchCompleteOrderMySoapHeader">
+    <wsdl:part name="MySoapHeader" element="tns:MySoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUnTakedOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteUnTakedOrder" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUnTakedOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteUnTakedOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUnTakedOrderMySoapHeader">
+    <wsdl:part name="MySoapHeader" element="tns:MySoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="AddCommentSoapIn">
+    <wsdl:part name="parameters" element="tns:AddComment" />
+  </wsdl:message>
+  <wsdl:message name="AddCommentSoapOut">
+    <wsdl:part name="parameters" element="tns:AddCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddCommentMySoapHeader">
+    <wsdl:part name="MySoapHeader" element="tns:MySoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="SearchMapPointSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchMapPoint" />
+  </wsdl:message>
+  <wsdl:message name="SearchMapPointSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchMapPointResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchMapPointMySoapHeader">
+    <wsdl:part name="MySoapHeader" element="tns:MySoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="UserTakeOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:UserTakeOrder" />
+  </wsdl:message>
+  <wsdl:message name="UserTakeOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:UserTakeOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserTakeOrderMySoapHeader">
+    <wsdl:part name="MySoapHeader" element="tns:MySoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="SearchUnCompleteTakedOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchUnCompleteTakedOrder" />
+  </wsdl:message>
+  <wsdl:message name="SearchUnCompleteTakedOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchUnCompleteTakedOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchUnCompleteTakedOrderMySoapHeader">
+    <wsdl:part name="MySoapHeader" element="tns:MySoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="SearchCompleteTakedOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchCompleteTakedOrder" />
+  </wsdl:message>
+  <wsdl:message name="SearchCompleteTakedOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchCompleteTakedOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchCompleteTakedOrderMySoapHeader">
+    <wsdl:part name="MySoapHeader" element="tns:MySoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="BackTakedOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:BackTakedOrder" />
+  </wsdl:message>
+  <wsdl:message name="BackTakedOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:BackTakedOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="BackTakedOrderMySoapHeader">
+    <wsdl:part name="MySoapHeader" element="tns:MySoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="completeTakedOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:completeTakedOrder" />
+  </wsdl:message>
+  <wsdl:message name="completeTakedOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:completeTakedOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="completeTakedOrderMySoapHeader">
+    <wsdl:part name="MySoapHeader" element="tns:MySoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetPointRouteSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPointRoute" />
+  </wsdl:message>
+  <wsdl:message name="GetPointRouteSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPointRouteResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPointRouteMySoapHeader">
+    <wsdl:part name="MySoapHeader" element="tns:MySoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="SearchCommentSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchComment" />
+  </wsdl:message>
+  <wsdl:message name="SearchCommentSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchCommentMySoapHeader">
+    <wsdl:part name="MySoapHeader" element="tns:MySoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetComment" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentMySoapHeader">
+    <wsdl:part name="MySoapHeader" element="tns:MySoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOrder" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderMySoapHeader">
+    <wsdl:part name="MySoapHeader" element="tns:MySoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="ModifyUserTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:ModifyUserType" />
+  </wsdl:message>
+  <wsdl:message name="ModifyUserTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:ModifyUserTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModifyUserTypeMySoapHeader">
+    <wsdl:part name="MySoapHeader" element="tns:MySoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="SearchUserByTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchUserByType" />
+  </wsdl:message>
+  <wsdl:message name="SearchUserByTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchUserByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchUserByTypeMySoapHeader">
+    <wsdl:part name="MySoapHeader" element="tns:MySoapHeader" />
+  </wsdl:message>
+  <wsdl:portType name="RunServiceSoap">
+    <wsdl:operation name="UserLogin">
+      <wsdl:input message="tns:UserLoginSoapIn" />
+      <wsdl:output message="tns:UserLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserRegister">
+      <wsdl:input message="tns:UserRegisterSoapIn" />
+      <wsdl:output message="tns:UserRegisterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserPlaceOrder">
+      <wsdl:input message="tns:UserPlaceOrderSoapIn" />
+      <wsdl:output message="tns:UserPlaceOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchUnCompleteOrder">
+      <wsdl:input message="tns:SearchUnCompleteOrderSoapIn" />
+      <wsdl:output message="tns:SearchUnCompleteOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchUnCompleteOrder2">
+      <wsdl:input message="tns:SearchUnCompleteOrder2SoapIn" />
+      <wsdl:output message="tns:SearchUnCompleteOrder2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchCompleteOrder">
+      <wsdl:input message="tns:SearchCompleteOrderSoapIn" />
+      <wsdl:output message="tns:SearchCompleteOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUnTakedOrder">
+      <wsdl:input message="tns:DeleteUnTakedOrderSoapIn" />
+      <wsdl:output message="tns:DeleteUnTakedOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddComment">
+      <wsdl:input message="tns:AddCommentSoapIn" />
+      <wsdl:output message="tns:AddCommentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchMapPoint">
+      <wsdl:input message="tns:SearchMapPointSoapIn" />
+      <wsdl:output message="tns:SearchMapPointSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserTakeOrder">
+      <wsdl:input message="tns:UserTakeOrderSoapIn" />
+      <wsdl:output message="tns:UserTakeOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchUnCompleteTakedOrder">
+      <wsdl:input message="tns:SearchUnCompleteTakedOrderSoapIn" />
+      <wsdl:output message="tns:SearchUnCompleteTakedOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchCompleteTakedOrder">
+      <wsdl:input message="tns:SearchCompleteTakedOrderSoapIn" />
+      <wsdl:output message="tns:SearchCompleteTakedOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BackTakedOrder">
+      <wsdl:input message="tns:BackTakedOrderSoapIn" />
+      <wsdl:output message="tns:BackTakedOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="completeTakedOrder">
+      <wsdl:input message="tns:completeTakedOrderSoapIn" />
+      <wsdl:output message="tns:completeTakedOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPointRoute">
+      <wsdl:input message="tns:GetPointRouteSoapIn" />
+      <wsdl:output message="tns:GetPointRouteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchComment">
+      <wsdl:input message="tns:SearchCommentSoapIn" />
+      <wsdl:output message="tns:SearchCommentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetComment">
+      <wsdl:input message="tns:GetCommentSoapIn" />
+      <wsdl:output message="tns:GetCommentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrder">
+      <wsdl:input message="tns:GetOrderSoapIn" />
+      <wsdl:output message="tns:GetOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyUserType">
+      <wsdl:input message="tns:ModifyUserTypeSoapIn" />
+      <wsdl:output message="tns:ModifyUserTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchUserByType">
+      <wsdl:input message="tns:SearchUserByTypeSoapIn" />
+      <wsdl:output message="tns:SearchUserByTypeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RunServiceSoap" type="tns:RunServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UserLogin">
+      <soap:operation soapAction="http://www.ewide.com/UserLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserRegister">
+      <soap:operation soapAction="http://www.ewide.com/UserRegister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserPlaceOrder">
+      <soap:operation soapAction="http://www.ewide.com/UserPlaceOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:UserPlaceOrderMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchUnCompleteOrder">
+      <soap:operation soapAction="http://www.ewide.com/SearchUnCompleteOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SearchUnCompleteOrderMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchUnCompleteOrder2">
+      <soap:operation soapAction="http://www.ewide.com/SearchUnCompleteOrder2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SearchUnCompleteOrder2MySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchCompleteOrder">
+      <soap:operation soapAction="http://www.ewide.com/SearchCompleteOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SearchCompleteOrderMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUnTakedOrder">
+      <soap:operation soapAction="http://www.ewide.com/DeleteUnTakedOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:DeleteUnTakedOrderMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddComment">
+      <soap:operation soapAction="http://www.ewide.com/AddComment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:AddCommentMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchMapPoint">
+      <soap:operation soapAction="http://www.ewide.com/SearchMapPoint" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SearchMapPointMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserTakeOrder">
+      <soap:operation soapAction="http://www.ewide.com/UserTakeOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:UserTakeOrderMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchUnCompleteTakedOrder">
+      <soap:operation soapAction="http://www.ewide.com/SearchUnCompleteTakedOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SearchUnCompleteTakedOrderMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchCompleteTakedOrder">
+      <soap:operation soapAction="http://www.ewide.com/SearchCompleteTakedOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SearchCompleteTakedOrderMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BackTakedOrder">
+      <soap:operation soapAction="http://www.ewide.com/BackTakedOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:BackTakedOrderMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="completeTakedOrder">
+      <soap:operation soapAction="http://www.ewide.com/completeTakedOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:completeTakedOrderMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPointRoute">
+      <soap:operation soapAction="http://www.ewide.com/GetPointRoute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetPointRouteMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchComment">
+      <soap:operation soapAction="http://www.ewide.com/SearchComment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SearchCommentMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetComment">
+      <soap:operation soapAction="http://www.ewide.com/GetComment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCommentMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrder">
+      <soap:operation soapAction="http://www.ewide.com/GetOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetOrderMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyUserType">
+      <soap:operation soapAction="http://www.ewide.com/ModifyUserType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ModifyUserTypeMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchUserByType">
+      <soap:operation soapAction="http://www.ewide.com/SearchUserByType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SearchUserByTypeMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="RunServiceSoap12" type="tns:RunServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UserLogin">
+      <soap12:operation soapAction="http://www.ewide.com/UserLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserRegister">
+      <soap12:operation soapAction="http://www.ewide.com/UserRegister" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserPlaceOrder">
+      <soap12:operation soapAction="http://www.ewide.com/UserPlaceOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:UserPlaceOrderMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchUnCompleteOrder">
+      <soap12:operation soapAction="http://www.ewide.com/SearchUnCompleteOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SearchUnCompleteOrderMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchUnCompleteOrder2">
+      <soap12:operation soapAction="http://www.ewide.com/SearchUnCompleteOrder2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SearchUnCompleteOrder2MySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchCompleteOrder">
+      <soap12:operation soapAction="http://www.ewide.com/SearchCompleteOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SearchCompleteOrderMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUnTakedOrder">
+      <soap12:operation soapAction="http://www.ewide.com/DeleteUnTakedOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:DeleteUnTakedOrderMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddComment">
+      <soap12:operation soapAction="http://www.ewide.com/AddComment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:AddCommentMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchMapPoint">
+      <soap12:operation soapAction="http://www.ewide.com/SearchMapPoint" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SearchMapPointMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserTakeOrder">
+      <soap12:operation soapAction="http://www.ewide.com/UserTakeOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:UserTakeOrderMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchUnCompleteTakedOrder">
+      <soap12:operation soapAction="http://www.ewide.com/SearchUnCompleteTakedOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SearchUnCompleteTakedOrderMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchCompleteTakedOrder">
+      <soap12:operation soapAction="http://www.ewide.com/SearchCompleteTakedOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SearchCompleteTakedOrderMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BackTakedOrder">
+      <soap12:operation soapAction="http://www.ewide.com/BackTakedOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BackTakedOrderMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="completeTakedOrder">
+      <soap12:operation soapAction="http://www.ewide.com/completeTakedOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:completeTakedOrderMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPointRoute">
+      <soap12:operation soapAction="http://www.ewide.com/GetPointRoute" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetPointRouteMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchComment">
+      <soap12:operation soapAction="http://www.ewide.com/SearchComment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SearchCommentMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetComment">
+      <soap12:operation soapAction="http://www.ewide.com/GetComment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCommentMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrder">
+      <soap12:operation soapAction="http://www.ewide.com/GetOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetOrderMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyUserType">
+      <soap12:operation soapAction="http://www.ewide.com/ModifyUserType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ModifyUserTypeMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchUserByType">
+      <soap12:operation soapAction="http://www.ewide.com/SearchUserByType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SearchUserByTypeMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RunService">
+    <wsdl:port name="RunServiceSoap" binding="tns:RunServiceSoap">
+      <soap:address location="http://localhost:33660/RunService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="RunServiceSoap12" binding="tns:RunServiceSoap12">
+      <soap12:address location="http://localhost:33660/RunService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
